@@ -62,11 +62,15 @@ function OpenPauseMenu()
             nameServer = NameServer
         })
     elseif QBCore then
+        local group = {
+            'admin',
+            
+        }
         local AllData = QBCore.Functions.GetPlayerData()
         local playerData = AllData
         local moneyAccounts = AllData.money
         local cash = moneyAccounts.cash
-        -- print(json.encode(AllData, { indent = true })) -- debug
+        print(json.encode(AllData, { indent = true })) -- debug
         local id = GetPlayerServerId(PlayerId())
         local playerName = GetPlayerName(PlayerId())
         local DataPlayer = {
