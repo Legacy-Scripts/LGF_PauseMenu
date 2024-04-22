@@ -40,15 +40,15 @@ function OpenPauseMenu()
     elseif ESX then
         local AllData = lib.callback.await('esx:PlayerDataPauseMenu', false)
         local playerData = AllData
-        local moneyAccounts = json.decode(AllData.moneyAccounts)
-        local cash = moneyAccounts[1].money
+        local moneyAccounts = AllData.moneyAccounts
+
         -- print(json.encode(AllData, { indent = true })) -- debug
         local id = GetPlayerServerId(PlayerId())
         local playerName = GetPlayerName(PlayerId())
         local DataPlayer = {
             name = playerData.firstName .. ' ' .. playerData.lastName,
             job = playerData.nameJob,
-            cash = cash,
+            cash = moneyAccounts,
             group = playerData.playerGroup,
             playerID = id,
             playerName = playerName,

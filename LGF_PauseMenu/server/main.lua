@@ -20,7 +20,7 @@ elseif ESX then
             firstName = xPlayer.get('firstName'),
             lastName = xPlayer.get('lastName'),
             nameJob = xPlayer.getJob().label,
-            moneyAccounts = json.encode(xPlayer.getAccounts()),
+            moneyAccounts = xPlayer.getAccount('money').money,
             playerGroup = xPlayer.getGroup(),
             charName = playerIdentifier,
         }
