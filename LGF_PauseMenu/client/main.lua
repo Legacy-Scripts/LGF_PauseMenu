@@ -94,7 +94,11 @@ function OpenPauseMenu()
     SetNuiFocus(true, true)
     pauseMenuActive = true
     SetPauseMenuActive(false)
-    OpenCam(PlayerPedId())
+    if not IsPedInAnyVehicle(PlayerPedId(), false) then
+        OpenCam(PlayerPedId())
+    else
+        return
+    end
 end
 
 
