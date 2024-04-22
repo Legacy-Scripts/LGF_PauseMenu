@@ -50,25 +50,20 @@ $(document).ready(function() {
             }, 500); 
         }, 4000);
     });
-    
 
     $('#quit').click(function() {
         console.log("Quit clicked");
-        openConfirmationPopup("Are you sure you want to exit?", function() {
-            $.post(`https://${GetParentResourceName()}/actionPauseMenu`, JSON.stringify('quit'));
+        openConfirmationPopup("Are you sure you want to exit?", 'quit', function() {
             closePauseMenu(); 
         });
     });
 
     $('#relog').click(function() {
         console.log("Relog clicked");
-        openConfirmationPopup("Are you sure you want to relog?", function() {
-            $.post(`https://${GetParentResourceName()}/actionPauseMenu`, JSON.stringify('relog'));
+        openConfirmationPopup("Are you sure you want to relog?",'relog' , function() {
             closePauseMenu(); 
         });
     });
-
-
 
     window.addEventListener('message', function(event) {
         let data = event.data;
@@ -157,15 +152,19 @@ $(document).ready(function() {
             console.error('Error calling server:', error);
         });
     }
-
-    function openConfirmationPopup(message, callback) {
+    
+    function openConfirmationPopup(message,action, callback) {
+      tipo = action
+      console.log(tipo)
         const popupContent = document.querySelector('.confirmation-popup .popup-content p');
         popupContent.innerText = message;
         $('#confirmationPopup').show();
         $('#overlay').show();
 
         $('#confirmAction').click(function() {
+            $.post(`https://${GetParentResourceName()}/actionPauseMenu`, JSON.stringify(tipo));
             callback();
+            tipo = null
             $('#confirmationPopup').hide();
             $('#overlay').hide();
         });
