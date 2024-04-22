@@ -105,19 +105,26 @@ RegisterCommand('__pauseMenu__', function()
     end
 end)
 
-function MainThread()
-    while true do
-        Wait(0)
-        if pauseMenuActive then
-            DisableControlAction(1, 200, true)
-        end
-    end
-end
-
 function ClosePauseMenu()
     SetNuiFocus(false, false)
     pauseMenuActive = false
     SetPauseMenuActive(true)
 end
 
-Citizen.CreateThread(MainThread)
+lib.addKeybind({
+    name = 'pausemenu',
+    description = 'Open pause menu',
+    defaultKey = 'ESCAPE',
+    onPressed = function(self)
+        if not IsPauseMenuActive() then
+            OpenPauseMenu()
+        end
+        while pauseMenuActive do
+            Wait(0)
+            DisableControlAction(1, 200, true)
+        end
+    end,
+    onReleased = function(self)
+    end
+
+})
