@@ -101,14 +101,6 @@ function OpenPauseMenu()
     end
 end
 
-
-RegisterKeyMapping('__pauseMenu__', 'Open Pause Menu', 'keyboard', 'ESCAPE')
-RegisterCommand('__pauseMenu__', function()
-    if not IsPauseMenuActive() then
-        OpenPauseMenu()
-    end
-end)
-
 function ClosePauseMenu()
     SetNuiFocus(false, false)
     pauseMenuActive = false
