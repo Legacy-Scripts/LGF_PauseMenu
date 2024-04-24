@@ -1,5 +1,21 @@
-
+local debug = true
 local ScenarioType = 'WORLD_HUMAN_SMOKING_POT'
+
+DebugPrint = function (...)
+    if not debug then return end
+    local args = {...}
+    local formatedArgs = {}
+
+    for i, arg in ipairs(args) do
+        if type(arg) == "table" then
+            formatedArgs[i] = json.encode(arg)
+        else
+            formatedArgs[i] = arg
+        end
+    end
+
+    print(table.unpack(formatedArgs))
+end
 
 OpenCam = function(ped)
     TaskStartScenarioInPlace(ped, ScenarioType, 0, true)
