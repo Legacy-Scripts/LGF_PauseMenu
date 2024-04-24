@@ -14,19 +14,33 @@ function OpenPauseMenu()
         return
     end
 
+    local playerName = GetPlayerName(PlayerId())
+
+    --[[ Default Format ]]
+    local DataPlayer = {
+        name = "John Doe",
+        job = "Unemployed",
+        cash = 1000000,
+        group = "admin",
+        playerID = cache.serverId,
+        playerName = playerName,
+        char = "Identifier",
+        nameServer = NameServer,
+    }
+
     if LegacyFramework then
         local AllData = lib.callback.await('LegacyFramework:PlayerDataPauseMenu', false)
         local playerData = AllData[1]
         local moneyAccounts = json.decode(playerData.moneyAccounts)
-        -- print(json.encode(AllData, { indent = true })) -- debug
-        local id = GetPlayerServerId(PlayerId())
-        local playerName = GetPlayerName(PlayerId())
-        local DataPlayer = {
+
+        DebugPrint(AllData) -- debug
+
+        DataPlayer = {
             name = playerData.firstName .. ' ' .. playerData.lastName,
             job = playerData.nameJob,
             cash = moneyAccounts.money,
             group = playerData.playerGroup,
-            playerID = id,
+            playerID = cache.serverId,
             playerName = playerName,
             char = playerData.charName,
             nameServer = NameServer,
@@ -42,15 +56,14 @@ function OpenPauseMenu()
         local playerData = AllData
         local moneyAccounts = AllData.moneyAccounts
 
-        -- print(json.encode(AllData, { indent = true })) -- debug
-        local id = GetPlayerServerId(PlayerId())
-        local playerName = GetPlayerName(PlayerId())
-        local DataPlayer = {
+        DebugPrint(AllData) -- debug
+
+        DataPlayer = {
             name = playerData.firstName .. ' ' .. playerData.lastName,
             job = playerData.nameJob,
             cash = moneyAccounts,
             group = playerData.playerGroup,
-            playerID = id,
+            playerID = cache.serverId,
             playerName = playerName,
             char = playerData.charName,
             nameServer = NameServer,
@@ -62,34 +75,30 @@ function OpenPauseMenu()
             nameServer = NameServer
         })
     elseif QBCore then
-        local group = {
-            'admin',
-            
-        }
         local AllData = QBCore.Functions.GetPlayerData()
         local playerData = AllData
         local moneyAccounts = AllData.money
         local cash = moneyAccounts.cash
-        print(json.encode(AllData, { indent = true })) -- debug
-        local id = GetPlayerServerId(PlayerId())
-        local playerName = GetPlayerName(PlayerId())
-        local DataPlayer = {
+
+        DebugPrint(AllData) -- debug
+
+        DataPlayer = {
             name = playerData.charinfo.firstname .. ' ' .. playerData.charinfo.lastname,
             job = playerData.job.label,
             cash = cash,
             group = playerData.job.name,
-            playerID = id,
+            playerID = cache.serverId,
             playerName = playerName,
             char = playerData.license,
             nameServer = NameServer,
         }
-
-        SendNUIMessage({
-            DataPlayer = DataPlayer,
-            action = "showPauseMenu",
-            nameServer = NameServer
-        })
     end
+
+    SendNUIMessage({
+        DataPlayer = DataPlayer,
+        action = "showPauseMenu",
+        nameServer = NameServer
+    })
 
     SetNuiFocus(true, true)
     pauseMenuActive = true
