@@ -1,4 +1,8 @@
+const debug = false;
 
+function debugPrint() {
+    if (debug) {console.log(arguments)};
+}
 
 $(document).ready(function() {
  
@@ -10,13 +14,13 @@ $(document).ready(function() {
     }
 
     $('#map').click(function() {
-        console.log("Map clicked");
+        debugPrint("Map clicked");
         $.post(`https://${GetParentResourceName()}/actionPauseMenu`, JSON.stringify('maps'));
         closePauseMenu(); 
     });
 
     $('#settings').click(function() {
-        console.log("Settings clicked");
+        debugPrint("Settings clicked");
         $.post(`https://${GetParentResourceName()}/actionPauseMenu`, JSON.stringify('settings'));
         closePauseMenu(); 
     });
@@ -52,14 +56,14 @@ $(document).ready(function() {
     });
 
     $('#quit').click(function() {
-        console.log("Quit clicked");
+        debugPrint("Quit clicked");
         openConfirmationPopup("Are you sure you want to exit?", 'quit', function() {
             closePauseMenu(); 
         });
     });
 
     $('#relog').click(function() {
-        console.log("Relog clicked");
+        debugPrint("Relog clicked");
         openConfirmationPopup("Are you sure you want to relog?",'relog' , function() {
             closePauseMenu(); 
         });
@@ -155,7 +159,7 @@ $(document).ready(function() {
     
     function openConfirmationPopup(message,action, callback) {
       tipo = action
-      console.log(tipo)
+      debugPrint(tipo)
         const popupContent = document.querySelector('.confirmation-popup .popup-content p');
         popupContent.innerText = message;
         $('#confirmationPopup').show();
