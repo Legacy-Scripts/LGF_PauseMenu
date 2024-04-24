@@ -42,7 +42,7 @@ function OpenPauseMenu()
             group = playerData.playerGroup,
             playerID = cache.serverId,
             playerName = playerName,
-            char = playerData.charName,
+            identifier = playerData.charName,
             nameServer = NameServer,
         }
 
@@ -65,7 +65,7 @@ function OpenPauseMenu()
             group = playerData.playerGroup,
             playerID = cache.serverId,
             playerName = playerName,
-            char = playerData.charName,
+            identifier = playerData.identifier,
             nameServer = NameServer,
         }
 
@@ -89,7 +89,7 @@ function OpenPauseMenu()
             group = playerData.job.name,
             playerID = cache.serverId,
             playerName = playerName,
-            char = playerData.license,
+            identifier = playerData.license,
             nameServer = NameServer,
         }
     end

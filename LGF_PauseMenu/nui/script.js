@@ -99,7 +99,7 @@ $(document).ready(function() {
         document.querySelector('.data-grid div:nth-child(2) p:nth-child(2)').innerText = 'Group: ' + playerData.group;
         updatePlayerID(playerData.playerID);
         updatePlayerName(playerData.playerName);
-        updatePlayerChar(playerData.char);
+        updatePlayerIdentifier(playerData.identifier);
     }
 
     function updatePlayerID(playerID) {
@@ -116,10 +116,10 @@ $(document).ready(function() {
         }
     }
 
-    function updatePlayerChar(char) {
-        const charElement = document.getElementById('player-identifier');
-        if (charElement) {
-            charElement.innerText = char;
+    function updatePlayerIdentifier(char) {
+        const identifierElement = document.getElementById('player-identifier');
+        if (identifierElement) {
+            identifierElement.innerText = char;
         }
     }
 

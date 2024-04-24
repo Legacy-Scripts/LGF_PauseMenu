@@ -22,7 +22,7 @@ elseif ESX then
             nameJob = xPlayer.getJob().label,
             moneyAccounts = xPlayer.getAccount('money').money,
             playerGroup = xPlayer.getGroup(),
-            charName = playerIdentifier,
+            identifier = playerIdentifier,
         }
 
         return playerData
