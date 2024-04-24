@@ -14,7 +14,7 @@ DebugPrint = function (...)
         end
     end
 
-    print(table.unpack(formatedArgs))
+    print("[^8DEBUG^7]",table.unpack(formatedArgs))
 end
 
 OpenCam = function(ped)
