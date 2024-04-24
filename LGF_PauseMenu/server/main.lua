@@ -10,8 +10,8 @@ if LegacyFramework then
 elseif ESX then
     lib.callback.register('esx:PlayerDataPauseMenu', function(source)
         local _source = source
-        local playerIdentifier = ESX.GetIdentifier(source)
         local xPlayer = ESX.GetPlayerFromId(_source)
+        local playerIdentifier = xPlayer.getIdentifier()
         if not xPlayer then
             return
         end
