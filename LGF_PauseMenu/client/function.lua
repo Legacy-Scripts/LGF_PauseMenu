@@ -50,5 +50,16 @@ CloseCam = function()
     -- DisplayRadar(true)
 end
 
+LoadJsonConfigFile = function (locale)
+    local jsonFile = LoadResourceFile(GetCurrentResourceName(), 'config.json')
+    local translations = json.decode(jsonFile)
+    if translations?[locale] then
+        translations = translations[locale]
+    else
+        print("[^4WARNING^7] Defined Language does not exist in `config.json` please inform server owner.")
+        translations = translations["EN"]
+    end
 
+    return translations
+end
 

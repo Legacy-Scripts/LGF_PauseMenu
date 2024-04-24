@@ -1,0 +1,164 @@
+{
+    "EN": {
+        "notification": {
+            "copy_success": "Copied Text Successfully"
+        },
+        "confirm": {
+            "exit_confirmation": "Are you sure you want to exit?",
+            "relog_confirmation": "Are you sure you want to relog?",
+            "yes": "Yes",
+            "no": "No"
+        },
+        "mainpage": {
+            "map": {
+                "title": "Map",
+                "description": "Open the current map"
+            },
+            "settings": {
+                "title": "Settings",
+                "description": "Adjust game settings and preferences"
+            },
+            "exit": {
+                "title": "Exit",
+                "description": "Exit the current session"
+            },
+            "relog": {
+                "title": "Relog",
+                "description": "Restart the session"
+            },
+            "rules": {
+                "title": "Rules",
+                "rules": [
+                    "Be respectful and considerate towards fellow users.",
+                    "Avoid spamming or flooding the chat with unnecessary messages.",
+                    "Follow the community guidelines and policies to ensure a positive environment for everyone.",
+                    "Respect the diversity of opinions and perspectives within the community.",
+                    "Help newcomers and provide assistance when needed.",
+                    "Use appropriate language and refrain from offensive or inappropriate behavior.",
+                    "Keep discussions on-topic and relevant to the current conversation.",
+                    "Report any violations of the rules to the moderators or administrators.",
+                    "Participate actively and contribute positively to the community.",
+                    "Enjoy your time and have fun interacting with others!"
+                ]
+            },
+            "playerdata": {
+                "title": "Current Player Data",
+                "name": "Name",
+                "job": "Job",
+                "cash": "Cash",
+                "group": "Group",
+                "currency": "$"
+            },
+            "resume": "Press ESC to resume",
+            "show": "Show"
+        }
+    },
+    "FR": {
+        "notification": {
+            "copy_success": "Text Copié Avec Succès"
+        },
+        "confirm": {
+            "exit_confirmation": "Êtes vous sur de vouloir quitter?",
+            "relog_confirmation": "Êtes vous sur de vouloir relog?",
+            "yes": "Oui",
+            "no": "Non"
+        },
+        "mainpage": {
+            "map": {
+                "title": "Carte",
+                "description": "Ouvrir la carte"
+            },
+            "settings": {
+                "title": "Paramètres",
+                "description": "Régler les paramètres et les préférences du jeu"
+            },
+            "exit": {
+                "title": "Quitter",
+                "description": "Quitter la session"
+            },
+            "relog": {
+                "title": "Relog",
+                "description": "Changer de session"
+            },
+            "rules": {
+                "title": "Règles",
+                "rules": [
+                    "Soyez respectueux et prévenant envers les autres utilisateurs",
+                    "Évitez de spammer ou d'inonder le chat de messages inutiles",
+                    "Suivre les lignes directrices et les politiques de la communauté afin de garantir un environnement positif pour tout le monde",
+                    "Respecter la diversité des opinions et des points de vue au sein de la communauté",
+                    "Aider les nouveaux arrivants et fournir une assistance en cas de besoin",
+                    "Utiliser un langage approprié et s'abstenir de tout comportement offensant ou inapproprié",
+                    "Veiller à ce que les discussions portent sur le sujet et soient pertinentes par rapport à la conversation en cours",
+                    "Signaler toute violation des règles aux modérateurs ou aux administrateurs",
+                    "Participez activement et apportez une contribution positive à la communauté",
+                    "Appréciez votre temps et amusez-vous en interagissant avec les autres !"
+                ]
+            },
+            "playerdata": {
+                "title": "Données du personnage",
+                "name": "Nom",
+                "job": "Job",
+                "cash": "Argent",
+                "group": "Groupe",
+                "currency": "$"
+            },
+            "resume": "Faite ÉCHAP pour reprendre",
+            "show": "Afficher"
+        }
+    },
+    "DE": {
+        "notification": {
+            "copy_success": "Text Erfolgreich kopiert"
+        },
+        "confirm": {
+            "exit_confirmation": "Willst du das Spiel wirklich verlassen?",
+            "relog_confirmation": "Sind Sie sicher, dass Sie sich neu anmelden wollen?",
+            "yes": "Ja",
+            "no": "Nein"
+        },
+        "mainpage": {
+            "map": {
+                "title": "Karte",
+                "description": "Die Karte öffnen"
+            },
+            "settings": {
+                "title": "Einstellung",
+                "description": "Einstellungen und Präferenzen für das Spiel anpassen"
+            },
+            "exit": {
+                "title": "Quitter",
+                "description": "Die Sitzung verlassen"
+            },
+            "relog": {
+                "title": "Relog",
+                "description": "Sitzung wechseln"
+            },
+            "rules": {
+                "title": "Regeln",
+                "rules": [
+                    "Seien Sie respektvoll und rücksichtsvoll gegenüber anderen Nutzern",
+                    "Vermeiden Sie es, den Chat zu spammen oder mit unnötigen Nachrichten zu überfluten",
+                    "Befolgen Sie die Richtlinien und Grundsätze der Gemeinschaft, um ein positives Umfeld für alle zu gewährleisten",
+                    "Respektieren Sie die Vielfalt der Meinungen und Ansichten in der Gemeinschaft",
+                    "Neuankömmlingen helfen und bei Bedarf Unterstützung leisten",
+                    "Verwenden Sie eine angemessene Sprache und verzichten Sie auf beleidigendes oder unangemessenes Verhalten",
+                    "Achten Sie darauf, dass Diskussionen themenbezogen und für das aktuelle Gespräch relevant sind",
+                    "Melden Sie Verstöße gegen die Regeln den Moderatoren oder Administratoren",
+                    "Beteiligen Sie sich aktiv und leisten Sie einen positiven Beitrag zur Gemeinschaft",
+                    "Genießen Sie Ihre Zeit und haben Sie Spaß bei der Interaktion mit anderen!"
+                ]
+            },
+            "playerdata": {
+                "title": "Charakterdaten",
+                "name": "Namen",
+                "job": "Job",
+                "cash": "Geld",
+                "group": "Gruppe",
+                "currency": "$"
+            },
+            "resume": "Drücken Sie ESC, um weiterzumachen",
+            "show": "Anzeigen"
+        }
+    }
+}
