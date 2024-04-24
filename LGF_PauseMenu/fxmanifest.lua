@@ -5,15 +5,19 @@ author 'ENTR510'
 version '1.0.0'
 lua54 'yes'
 
-shared_scripts {
-    '@ox_lib/init.lua'
+files {
+    'config.json'
 }
 
+shared_scripts {
+    '@ox_lib/init.lua',
+    'config.lua',
+}
 
 client_scripts {
-    'client/main.lua',
-    'client/callback.lua',
     'client/function.lua',
+    'client/callback.lua',
+    'client/main.lua',
 }
 
 server_scripts {

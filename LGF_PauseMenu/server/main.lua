@@ -10,8 +10,8 @@ if LegacyFramework then
 elseif ESX then
     lib.callback.register('esx:PlayerDataPauseMenu', function(source)
         local _source = source
-        local playerIdentifier = ESX.GetIdentifier(source)
         local xPlayer = ESX.GetPlayerFromId(_source)
+        local playerIdentifier = xPlayer.getIdentifier()
         if not xPlayer then
             return
         end
@@ -22,7 +22,7 @@ elseif ESX then
             nameJob = xPlayer.getJob().label,
             moneyAccounts = xPlayer.getAccount('money').money,
             playerGroup = xPlayer.getGroup(),
-            charName = playerIdentifier,
+            identifier = playerIdentifier,
         }
 
         return playerData

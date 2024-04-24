@@ -1,5 +1,21 @@
-
 local ScenarioType = 'WORLD_HUMAN_SMOKING_POT'
+local camera
+
+DebugPrint = function (...)
+    if not Config.Debug then return end
+    local args = {...}
+    local formatedArgs = {}
+
+    for i, arg in ipairs(args) do
+        if type(arg) == "table" then
+            formatedArgs[i] = json.encode(arg)
+        else
+            formatedArgs[i] = arg
+        end
+    end
+
+    print("[^8DEBUG^7]",table.unpack(formatedArgs))
+end
 
 OpenCam = function(ped)
     TaskStartScenarioInPlace(ped, ScenarioType, 0, true)
@@ -34,5 +50,16 @@ CloseCam = function()
     -- DisplayRadar(true)
 end
 
+LoadJsonConfigFile = function (locale)
+    local jsonFile = LoadResourceFile(GetCurrentResourceName(), 'config.json')
+    local translations = json.decode(jsonFile)
+    if translations?[locale] then
+        translations = translations[locale]
+    else
+        print("[^4WARNING^7] Defined Language does not exist in `config.json` please inform server owner.")
+        translations = translations["EN"]
+    end
 
+    return translations
+end
 

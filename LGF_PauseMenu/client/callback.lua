@@ -1,3 +1,5 @@
+local locale = LoadJsonConfigFile(Config.Language)
+
 RegisterNUICallback("actionPauseMenu", function(data, cb)
     if data == 'settings' then
         SendNUIMessage({ action = "settings" })
@@ -25,4 +27,10 @@ RegisterNUICallback("closePauseMenu", function(data, cb)
     cb({})
     ClosePauseMenu()
     CloseCam()
+end)
+
+RegisterNUICallback("getLocale", function(data, cb)
+    cb({
+        locale = locale
+    })
 end)
