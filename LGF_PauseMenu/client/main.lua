@@ -7,7 +7,7 @@ local QBCore = GetResourceState('qb-core'):find('start') and exports['qb-core']:
 
 
 local pauseMenuActive = false
-local NameServer = 'Legacy Framework'
+local NameServer = Config.ServerName
 
 function OpenPauseMenu()
     if LocalPlayer.state.invOpen then
@@ -97,7 +97,8 @@ function OpenPauseMenu()
     SendNUIMessage({
         DataPlayer = DataPlayer,
         action = "showPauseMenu",
-        nameServer = NameServer
+        nameServer = NameServer,
+        discordInvite = Config.DiscordInvite
     })
 
     SetNuiFocus(true, true)

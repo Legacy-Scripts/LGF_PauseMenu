@@ -1,8 +1,8 @@
-local debug = true
 local ScenarioType = 'WORLD_HUMAN_SMOKING_POT'
+local camera
 
 DebugPrint = function (...)
-    if not debug then return end
+    if not Config.Debug then return end
     local args = {...}
     local formatedArgs = {}
 
