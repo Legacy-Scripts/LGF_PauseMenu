@@ -1,17 +1,18 @@
-local LegacyFramework = GetResourceState('LegacyFramework'):find('start') and exports["LegacyFramework"]:ReturnFramework() or nil
+-- local LegacyFramework = GetResourceState('LegacyFramework'):find('start') and exports["LegacyFramework"]:ReturnFramework() or nil
 local ESX = GetResourceState('es_extended'):find('start') and exports['es_extended']:getSharedObject() or nil
 
-if LegacyFramework then
-    lib.callback.register('LegacyFramework:PlayerDataPauseMenu', function(source)
-        local _source = source
-        local playerData = LegacyFramework.SvPlayerFunctions.GetPlayerData(_source)
-        return playerData
-    end)
-elseif ESX then
+-- if LegacyFramework then
+-- lib.callback.register('LegacyFramework:PlayerDataPauseMenu', function(source)
+--     local _source = source
+--     local playerData = LegacyFramework.SvPlayerFunctions.GetPlayerData(_source)
+--     return playerData
+-- end)
+
+if ESX then
     lib.callback.register('esx:PlayerDataPauseMenu', function(source)
         local _source = source
+        local playerIdentifier = ESX.GetIdentifier(source)
         local xPlayer = ESX.GetPlayerFromId(_source)
-        local playerIdentifier = xPlayer.getIdentifier()
         if not xPlayer then
             return
         end
@@ -22,7 +23,7 @@ elseif ESX then
             nameJob = xPlayer.getJob().label,
             moneyAccounts = xPlayer.getAccount('money').money,
             playerGroup = xPlayer.getGroup(),
-            identifier = playerIdentifier,
+            charName = playerIdentifier,
         }
 
         return playerData
