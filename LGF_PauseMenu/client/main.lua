@@ -1,7 +1,6 @@
 ---@diagnostic disable: missing-parameter
 
-local LegacyFramework = GetResourceState('LegacyFramework'):find('start') and
-    exports["LegacyFramework"]:ReturnFramework() or nil
+local LegacyFramework = GetResourceState('LegacyFramework'):find('start') and exports["LegacyFramework"]:ReturnFramework() or nil
 local ESX = GetResourceState('es_extended'):find('start') and exports['es_extended']:getSharedObject() or nil
 local QBCore = GetResourceState('qb-core'):find('start') and exports['qb-core']:GetCoreObject() or nil
 
@@ -29,8 +28,8 @@ function OpenPauseMenu()
     }
 
     if LegacyFramework then
-        local AllData = lib.callback.await('LegacyFramework:PlayerDataPauseMenu', false)
-        local playerData = AllData[1]
+        local LGF = LocalPlayer.state.playerData -- Retrieve Client Data By State Bag
+        local playerData = LGF[1]
         local moneyAccounts = json.decode(playerData.moneyAccounts)
 
         DebugPrint(AllData) -- debug
