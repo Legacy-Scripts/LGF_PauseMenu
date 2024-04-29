@@ -1,0 +1,54 @@
+{
+    "notification": {
+        "copy_success": "Text Erfolgreich kopiert"
+    },
+    "confirm": {
+        "exit_confirmation": "Willst du das Spiel wirklich verlassen?",
+        "relog_confirmation": "Sind Sie sicher, dass Sie sich neu anmelden wollen?",
+        "yes": "Ja",
+        "no": "Nein"
+    },
+    "mainpage": {
+        "map": {
+            "title": "Karte",
+            "description": "Die Karte öffnen"
+        },
+        "settings": {
+            "title": "Einstellung",
+            "description": "Einstellungen und Präferenzen für das Spiel anpassen"
+        },
+        "exit": {
+            "title": "Quitter",
+            "description": "Die Sitzung verlassen"
+        },
+        "relog": {
+            "title": "Relog",
+            "description": "Sitzung wechseln"
+        },
+        "rules": {
+            "title": "Regeln",
+            "rules": [
+                "Seien Sie respektvoll und rücksichtsvoll gegenüber anderen Nutzern",
+                "Vermeiden Sie es, den Chat zu spammen oder mit unnötigen Nachrichten zu überfluten",
+                "Befolgen Sie die Richtlinien und Grundsätze der Gemeinschaft, um ein positives Umfeld für alle zu gewährleisten",
+                "Respektieren Sie die Vielfalt der Meinungen und Ansichten in der Gemeinschaft",
+                "Neuankömmlingen helfen und bei Bedarf Unterstützung leisten",
+                "Verwenden Sie eine angemessene Sprache und verzichten Sie auf beleidigendes oder unangemessenes Verhalten",
+                "Achten Sie darauf, dass Diskussionen themenbezogen und für das aktuelle Gespräch relevant sind",
+                "Melden Sie Verstöße gegen die Regeln den Moderatoren oder Administratoren",
+                "Beteiligen Sie sich aktiv und leisten Sie einen positiven Beitrag zur Gemeinschaft",
+                "Genießen Sie Ihre Zeit und haben Sie Spaß bei der Interaktion mit anderen!"
+            ]
+        },
+        "playerdata": {
+            "title": "Charakterdaten",
+            "name": "Namen",
+            "job": "Job",
+            "cash": "Geld",
+            "group": "Gruppe",
+            "currency": "$"
+        },
+        "resume": "Drücken Sie ESC, um weiterzumachen",
+        "show": "Anzeigen"
+    }
+}

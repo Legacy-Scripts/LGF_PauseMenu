@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pause Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <div class="pause-menu">
+        <div class="info-container">
+            <div id="player-identifier">
+                <span id="show-text">Show</span> 
+                Player ID
+            </div>
+            <div id="player-name">Player Name</div>
+            <div id="current-time">Current Time</div>
+            <div id="player-id">Player Identi</div>
+        </div>
+        <div class="menu-header">
+            <h1><span id="server-name">Pause Menu</span></h1>
+        </div>
+        <div class="menu-options">
+            <div class="menu-option" id="map">
+                <i class="fas fa-map"></i>
+                <div class="option-info">
+                    <h2 id="map-h2">Map</h2>
+                    <p id="map-p">Open the current map</p>
+                </div>
+            </div>
+            <div class="menu-option" id="settings">
+                <i class="fas fa-cogs"></i>
+                <div class="option-info">
+                    <h2 id="settings-h2">Settings</h2>
+                    <p id="settings-p">Adjust game settings and preferences</p>
+                </div>
+            </div>
+            <div class="menu-option" id="quit">
+                <i class="fas fa-sign-out-alt"></i>
+                <div class="option-info">
+                    <h2 id="exit-h2">Exit</h2>
+                    <p id="exit-p">Exit the current session</p>
+                </div>
+            </div>
+            <div class="menu-option" id="relog">
+                <i class="fas fa-redo"></i>
+                <div class="option-info">
+                    <h2 id="relog-h2">Relog</h2>
+                    <p id="relog-p">Restart the session</p>
+                </div>
+            </div>
+            
+            <div class="menu-option" id="announcement">
+                <i class="fas fa-paste"></i>
+                <div class="option-info">
+                    <h2 id="rules-h2">Rules</h2>
+                    <div class="announcement-content" id="rules-div">
+                        <p>• Be respectful and considerate towards fellow users.</p>
+                        <p>• Avoid spamming or flooding the chat with unnecessary messages.</p>
+                        <p>• Follow the community guidelines and policies to ensure a positive environment for everyone.</p>
+                        <p>• Respect the diversity of opinions and perspectives within the community.</p>
+                        <p>• Help newcomers and provide assistance when needed.</p>
+                        <p>• Use appropriate language and refrain from offensive or inappropriate behavior.</p>
+                        <p>• Keep discussions on-topic and relevant to the current conversation.</p>
+                        <p>• Report any violations of the rules to the moderators or administrators.</p>
+                        <p>• Participate actively and contribute positively to the community.</p>
+                        <p>• Enjoy your time and have fun interacting with others!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-option-grid">
+      
+                <div class="option-info">
+                    <h2 id="playerdata-h2">Current Player Data</h2>
+                    <div class="data-grid">
+                        <div>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <div>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="reloadButton" class="corner-buttons" style="display: none;">Discord</div>
+        </div>
+        <div class="menu-footer">
+            <div class="option-info esc-container">
+                <p id="resume-p">Press ESC to resume</p>
+            </div>
+        </div>
+        <div id="popup-trigger" class="corner-button"></div>
+        <div id="confirmationPopup" class="confirmation-popup">
+            <div class="popup-content">
+                <p></p>
+                <div class="buttons">
+                    <button id="confirmAction">Yes</button>
+                    <button id="cancelAction">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
