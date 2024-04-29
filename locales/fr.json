@@ -1,0 +1,54 @@
+{
+    "notification": {
+        "copy_success": "Text Copié Avec Succès"
+    },
+    "confirm": {
+        "exit_confirmation": "Êtes vous sur de vouloir quitter?",
+        "relog_confirmation": "Êtes vous sur de vouloir relog?",
+        "yes": "Oui",
+        "no": "Non"
+    },
+    "mainpage": {
+        "map": {
+            "title": "Carte",
+            "description": "Ouvrir la carte"
+        },
+        "settings": {
+            "title": "Paramètres",
+            "description": "Régler les paramètres et les préférences du jeu"
+        },
+        "exit": {
+            "title": "Quitter",
+            "description": "Quitter la session"
+        },
+        "relog": {
+            "title": "Relog",
+            "description": "Changer de session"
+        },
+        "rules": {
+            "title": "Règles",
+            "rules": [
+                "Soyez respectueux et prévenant envers les autres utilisateurs",
+                "Évitez de spammer ou d'inonder le chat de messages inutiles",
+                "Suivre les lignes directrices et les politiques de la communauté afin de garantir un environnement positif pour tout le monde",
+                "Respecter la diversité des opinions et des points de vue au sein de la communauté",
+                "Aider les nouveaux arrivants et fournir une assistance en cas de besoin",
+                "Utiliser un langage approprié et s'abstenir de tout comportement offensant ou inapproprié",
+                "Veiller à ce que les discussions portent sur le sujet et soient pertinentes par rapport à la conversation en cours",
+                "Signaler toute violation des règles aux modérateurs ou aux administrateurs",
+                "Participez activement et apportez une contribution positive à la communauté",
+                "Appréciez votre temps et amusez-vous en interagissant avec les autres !"
+            ]
+        },
+        "playerdata": {
+            "title": "Données du personnage",
+            "name": "Nom",
+            "job": "Job",
+            "cash": "Argent",
+            "group": "Groupe",
+            "currency": "$"
+        },
+        "resume": "Faite ÉCHAP pour reprendre",
+        "show": "Afficher"
+    }
+}

@@ -1,12 +1,22 @@
-local locale = LoadJsonConfigFile(Config.Language)
+local Functions <const> = require 'modules.function'
+
+RegisterNUICallback("getLocale", function(data, cb)
+    cb({ locale = Functions:GetLocale() })
+end)
+
+RegisterNUICallback("closePauseMenu", function(data, cb)
+    cb({})
+    Functions:ClosePauseMenu()
+    Functions:CloseCam()
+end)
 
 RegisterNUICallback("actionPauseMenu", function(data, cb)
     if data == 'settings' then
         SendNUIMessage({ action = "settings" })
-        ActivateFrontendMenu(GetHashKey('FE_MENU_VERSION_LANDING_MENU'), 0, -1)
+        ActivateFrontendMenu(`FE_MENU_VERSION_LANDING_MENU`, 0, -1)
     elseif data == 'maps' then
         SendNUIMessage({ action = "maps" })
-        ClosePauseMenu()
+        Functions:ClosePauseMenu()
         Wait(300)
         ActivateFrontendMenu(-1171018317, 0, -1)
         while not IsFrontendReadyForControl() do
@@ -21,16 +31,4 @@ RegisterNUICallback("actionPauseMenu", function(data, cb)
         SendNUIMessage({ action = "relog" })
         TriggerEvent('LegacyFramework:relog') -- change your event relog 
     end
-end)
-
-RegisterNUICallback("closePauseMenu", function(data, cb)
-    cb({})
-    ClosePauseMenu()
-    CloseCam()
-end)
-
-RegisterNUICallback("getLocale", function(data, cb)
-    cb({
-        locale = locale
-    })
 end)

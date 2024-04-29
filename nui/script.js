@@ -117,14 +117,12 @@ $(document).ready(function() {
 
     window.addEventListener('message', function(event) {
         let data = event.data;
-        if (data.action === 'showPauseMenu') {
+        
+        discordInvite = data?.discordInvite ? data.discordInvite : discordInvite;
 
-            discordInvite = data?.discordInvite ? data.discordInvite : discordInvite;
-
-            updateUI(data.DataPlayer);
-            openPauseMenu();
-            updatePauseMenuTitle(data.nameServer); 
-        }
+        updateUI(data.DataPlayer);
+        openPauseMenu();
+        updatePauseMenuTitle(data.nameServer); 
     });
 
     function updateTime() {

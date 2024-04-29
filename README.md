@@ -25,7 +25,15 @@ Simple Pause menu for various Frameworks
 <hr style="border-radius: 50%; margin: 0 25px;">
 
 ## Configuration Files:
-- General Configuration: `LGF-PauseMenu\config.lua`
+- General Configuration: `Convars`
     - Set Server Name, Discord Invite, Language, Debug Mode
-- Translations: `LGF-PauseMenu\config.json`
+
+```cfg
+    setr pausemenu:language en
+    setr pausemenu:discordInvite "https://discord.gg/wd5PszPA2p"
+    setr pausemenu:serverName "Legacy Framework"
+    setr pausemenu:debug "false"
+```
+
+- Translations: `locales/*.json`
     - Follow the given structure, if not you <b>will</b> get errors

@@ -1,0 +1,54 @@
+{
+    "notification": {
+        "copy_success": "Copied Text Successfully"
+    },
+    "confirm": {
+        "exit_confirmation": "Are you sure you want to exit?",
+        "relog_confirmation": "Are you sure you want to relog?",
+        "yes": "Yes",
+        "no": "No"
+    },
+    "mainpage": {
+        "map": {
+            "title": "Map",
+            "description": "Open the current map"
+        },
+        "settings": {
+            "title": "Settings",
+            "description": "Adjust game settings and preferences"
+        },
+        "exit": {
+            "title": "Exit",
+            "description": "Exit the current session"
+        },
+        "relog": {
+            "title": "Relog",
+            "description": "Restart the session"
+        },
+        "rules": {
+            "title": "Rules",
+            "rules": [
+                "Be respectful and considerate towards fellow users.",
+                "Avoid spamming or flooding the chat with unnecessary messages.",
+                "Follow the community guidelines and policies to ensure a positive environment for everyone.",
+                "Respect the diversity of opinions and perspectives within the community.",
+                "Help newcomers and provide assistance when needed.",
+                "Use appropriate language and refrain from offensive or inappropriate behavior.",
+                "Keep discussions on-topic and relevant to the current conversation.",
+                "Report any violations of the rules to the moderators or administrators.",
+                "Participate actively and contribute positively to the community.",
+                "Enjoy your time and have fun interacting with others!"
+            ]
+        },
+        "playerdata": {
+            "title": "Current Player Data",
+            "name": "Name",
+            "job": "Job",
+            "cash": "Cash",
+            "group": "Group",
+            "currency": "$"
+        },
+        "resume": "Press ESC to resume",
+        "show": "Show"
+    }
+}
