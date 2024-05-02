@@ -25,7 +25,7 @@ if lib.context == "client" then
         local Player
         
         if Name == "LegacyFramework" then 
-            Player = LocalPlayer.state.playerData[1]
+            Player = Framework.PlayerFunctions.GetClientData()[1]
             Data.group = Player.playerGroup
             Data.job = Player.nameJob 
             Data.identifier = Player.charName
