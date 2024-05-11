@@ -33,6 +33,7 @@ Simple Pause menu for various Frameworks
     setr pausemenu:discordInvite "https://discord.gg/wd5PszPA2p"
     setr pausemenu:serverName "Legacy Framework"
     setr pausemenu:debug "false"
+    setr pausemenu:logoutReason "Sei uscito dal gioco"
 ```
 
 - Translations: `locales/*.json`
