@@ -23,6 +23,5 @@ files {
     "nui/styles.css",
     "nui/script.js",
     "locales/*.json",
-    "modules/*.lua",
-    "config.lua"
+    "modules/*.lua"
 }
