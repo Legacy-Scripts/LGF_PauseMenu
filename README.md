@@ -15,7 +15,7 @@ Simple Pause menu for various Frameworks
 - LegacyFramework
 - ESX
 - QB-core
-
+- QBOX
 ## Dependency
 - [OX LIB](https://github.com/overextended/ox_lib) 
 
