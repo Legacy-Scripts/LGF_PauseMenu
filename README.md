@@ -26,7 +26,7 @@ Simple Pause menu for various Frameworks
 
 ## Configuration Files:
 - General Configuration: `Convars`
-    - Set Server Name, Discord Invite, Language, Debug Mode
+    - Set Server Name, Discord Invite, Language, Debug Mode, Log out message, Use random animations, Set the default animation
 
 ```cfg
     setr pausemenu:language en
@@ -34,6 +34,8 @@ Simple Pause menu for various Frameworks
     setr pausemenu:serverName "Legacy Framework"
     setr pausemenu:debug "false"
     setr pausemenu:logoutReason "Sei uscito dal gioco"
+    setr pausemenu:randomanimations "true"
+    setr pausemenu:defaultanimation "WORLD_HUMAN_SMOKING_POT"
 ```
 
 - Translations: `locales/*.json`
