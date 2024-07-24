@@ -35,7 +35,7 @@ if lib.context == "client" then
             Data.cash = Accounts?.money
             Data.name = ("%s %s"):format(Player.firstName, Player.lastName)
         elseif Name == "es_extended" then
-            Player = Framework.PlayerData
+            Player = Framework.GetPlayerData()
             Data.group = Player.group
             Data.job = Player.job.label
             Data.identifier = Player.identifier
