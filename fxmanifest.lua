@@ -25,3 +25,7 @@ files {
     "locales/*.json",
     "modules/*.lua"
 }
+
+dependencies {
+    "ox_lib"
+}
