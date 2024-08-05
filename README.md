@@ -1,6 +1,6 @@
 # LGF_PauseMenu
 Simple Pause menu for various Frameworks
-![](https://img.shields.io/github/downloads/ENT510/LGF_PauseMenu/total?logo=github)
+
 <div style="padding: 0 25%;">
     <h3 align="center">Supported Languages</h3>
     <hr style="border-radius: 50px;">
